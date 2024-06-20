@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo app</title>
+</head>
+<body>
+    <form method="post" action="/todos/create">
+
+        <input type="text" name="description">
+
+        <input type="submit" value="create">
+        
+    </form>
+    <ul>
+        {% for todo in todos %}
+        <li>{{ todo.description }}</li>       
+        {% endfor %}
+    </ul>
+    
+</body>
+</html>
